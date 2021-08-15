@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}相づちくん{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% if previous_text %}
+      <label for="input_text"`>あなた：　</label>
+      <input type="text" size="100" value="" placeholder="{{ previous_text }}" >
+    {% endif %}
+    <br>
+    {% if output_text %}
+      <label for="input_text"`>相づち：　</label>
+      <input type="text" size="100" value="" placeholder="{{ output_text }}" >
+    {% endif %}
+    <br> <br>
+    <label for="input_text"`>何か書いて</label>
+    <input size="100" name="input_text" id="input_text" required>
+    <input type="submit" value="入力">
+
+  </form>
+{% endblock %}
