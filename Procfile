@@ -1,1 +1,1 @@
-web: gunicorn app:ezc --log-file=-
+web: gunicorn app:app --log-file=-
